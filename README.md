@@ -4,17 +4,17 @@ This package provides custom form fields for [Filament](https://filamentphp.com/
 
 This package uses [LaravelLegends/pt-br-validator](https://github.com/LaravelLegends/pt-br-validator) to validate Brazilian Portuguese fields.
 
-![image demo](https://raw.githubusercontent.com/leandrocfe/filament-ptbr-form-fields/develop/screenshots/v3x-example.png)
+![image demo](https://raw.githubusercontent.com/wadyntecno/filament-ptbr-form-fields-leandro/develop/screenshots/v3x-example.png)
 
 ## Installation
 
 You can install the package via Composer:
 
 ```bash
-composer require leandrocfe/filament-ptbr-form-fields:"^3.0"
+composer require wadyntecno/filament-ptbr-form-fields-leandro:"^3.0"
 ```
 
-### Filament V2 - if you are using Filament v2.x, you can use [this section](https://github.com/leandrocfe/filament-ptbr-form-fields/tree/2.0.0)
+### Filament V2 - if you are using Filament v2.x, you can use [this section](https://github.com/wadyntecno/filament-ptbr-form-fields-leandro/tree/2.0.0)
 
 ## Usage
 
@@ -23,7 +23,7 @@ composer require leandrocfe/filament-ptbr-form-fields:"^3.0"
 To create a dynamic input that accepts either CPF or CNPJ, use:
 
 ```php
-use Leandrocfe\FilamentPtbrFormFields\Document;
+use wadyntecno\FilamentPtbrFormFields\Document;
 //CPF or CNPJ
 Document::make('cpf_or_cnpj')
     ->dynamic()
@@ -77,7 +77,7 @@ Document::make('cpf')
 To create a dynamic input that formats phone numbers with DDD, use:
 
 ```php
-use Leandrocfe\FilamentPtbrFormFields\PhoneNumber;
+use wadyntecno\FilamentPtbrFormFields\PhoneNumber;
 PhoneNumber::make('phone_number')
 ```
 
@@ -98,7 +98,7 @@ PhoneNumber::make('phone_number')
 To create a money input field, use the following syntax:
 
 ```php
-use Leandrocfe\FilamentPtbrFormFields\Money;
+use wadyntecno\FilamentPtbrFormFields\Money;
 Money::make('price')
     ->default('100,00')
 
@@ -112,7 +112,7 @@ This is suitable for use with `decimal` or `float` data types.
 If you prefer to work with integer values, you can format the money input using the `intFormat()` method:
 
 ```php
-use Leandrocfe\FilamentPtbrFormFields\Money;
+use wadyntecno\FilamentPtbrFormFields\Money;
 Money::make('price')
     ->default(10000)
     ->intFormat()
@@ -124,7 +124,7 @@ Money::make('price')
 To retrieve the raw state of the field, you can use the `dehydratedMask() method:
 
 ```php
-use Leandrocfe\FilamentPtbrFormFields\Money;
+use wadyntecno\FilamentPtbrFormFields\Money;
 Money::make('price')
     ->default('100,00')
     ->dehydrateMask()
@@ -143,7 +143,7 @@ This package leverages the `archtechx/money` package under the hood. By default,
 
 If you want to switch to the `USD` (United States Dollar) format, you can do so with the following code:
 ```php
-use Leandrocfe\FilamentPtbrFormFields\Currencies\USD;
+use wadyntecno\FilamentPtbrFormFields\Currencies\USD;
 
 Money::make('price')
     ->currency(USD::class)
@@ -233,7 +233,7 @@ Money::make('price')
 To integrate with the ViaCep API for CEP validation and address autofill, use:
 
 ```php
-use Leandrocfe\FilamentPtbrFormFields\Cep;
+use wadyntecno\FilamentPtbrFormFields\Cep;
 use Filament\Forms\Components\TextInput;
 Cep::make('postal_code')
     ->viaCep(
@@ -281,11 +281,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this package, please send an e-mail to <leandrocfe@gmail.com>.
+If you discover a security vulnerability within this package, please send an e-mail to <wadyntecno@gmail.com>.
 
 ## Credits
 
--   [Leandro Costa Ferreira](https://github.com/leandrocfe)
+-   [Leandro Costa Ferreira](https://github.com/wadyntecno)
 -   [All Contributors](../../contributors)
 
 ## License
